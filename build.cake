@@ -13,11 +13,23 @@ var target = Argument("target", "Default");
 // Define directories.
 var buildDir = Directory("./output");
 
+// Devine output Zip file
+var outputZip = "paulsblog.zip";
+
 //////////////////////////////////////////////////////////////////////
 // TASKS
 //////////////////////////////////////////////////////////////////////
 
+Task ("Clean")
+    .Does(() =>
+    {
+        if (FileExists(outputZip)) {
+            DeleteFile(outputZip);
+        }
+    });
+
 Task("Build")
+    .IsDependentOn("Clean")
     .Does(() =>
     {
         Wyam(new WyamSettings
@@ -25,7 +37,7 @@ Task("Build")
             UseLocalPackages = true
         });  
         
-        Zip("./output", "paulsblog.zip");   
+        Zip("./output", outputZip);   
     });
     
 Task("Preview")
