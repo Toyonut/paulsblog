@@ -1,3 +1,7 @@
 # ignore output and packages directories
 output/
 packages/
+tools/
+
+# Allow cake packages.config
+!tools/packages.config 
