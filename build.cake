@@ -24,7 +24,13 @@ Task ("Clean")
     .Does(() =>
     {
         if (FileExists(outputZip)) {
+            Information("Output zip found, deleting.");
             DeleteFile(outputZip);
+        }
+
+        if (DirectoryExists(buildDir)) {
+            Information("Output directory found, deleting.");
+            DeleteDirectory(buildDir, recursive:true);
         }
     });
 
