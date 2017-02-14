@@ -23,7 +23,9 @@ Task("Build")
         Wyam(new WyamSettings
         {
             UseLocalPackages = true
-        });        
+        });  
+        
+        Zip("./output", "paulsblog.zip");   
     });
     
 Task("Preview")
