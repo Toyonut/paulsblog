@@ -5,3 +5,6 @@ tools/
 
 # Allow cake packages.config
 !tools/packages.config 
+
+# Ignore the output zip
+*.zip
