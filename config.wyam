@@ -1,5 +1,5 @@
 #recipe Blog
-#n Wyam.Minification
+#nuget Wyam.Minification
 #theme CleanBlog
 
 Pipelines.Add("MinifyContent",
