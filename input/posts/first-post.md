@@ -1,8 +1,8 @@
 Title: First Post
-Published: 17/02/2017
+Published: 17/2/2017
 Tags: Introduction
 ---
-##Publishing this blog
+## Publishing this blog
 
 It was statically generated using [Wyam](https://wyam.io/).
 It was pushed to a git repo in [VSTS](https://www.visualstudio.com/team-services/).
