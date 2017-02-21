@@ -1,6 +1,9 @@
 Title: Building with Cake
 Published: 21/02/2017
-Tags: Cake, Wyam, Build
+Tags: 
+    - Cake
+    - Wyam
+    - Build
 ---
 ### Why Cake?
 
