@@ -14,8 +14,8 @@ What I don't like is when it comes time to move the build and redoing a lot of w
 <p>One day my boss came back from Build conf. Hey, I have just seen VSTS, I think we need to go with VSTS.<br>
 Awesome, except we were just done upgrading TFS to 2015 because we wanted gated builds... There is no export to VSTS.<br>
 We also had a bunch of build in TeamCity... How do you export that?<br>
-You don't. You painstakingly find all the pieces and the dependancies and start the config from sratch in the WebUI.<br>
-That is what we did. Moved all the git repos, started reconstructing all the builds. There has to be a better way.</p>
+You don't. You painstakingly find all the pieces and the dependancies and start the config from scratch in the WebUI.<br>
+So that is what we did. Moved all the git repos, started reconstructing all the builds. There has to be a better way.</p>
 
 In my new role, I found they were using [PSake](https://github.com/psake/psake/). <br>
 Psake is cool as it is all PowerShell, so if you know PowerShell, you can figure out PSake quickly.<br>
