@@ -41,9 +41,14 @@ Task("Build")
         Wyam(new WyamSettings
         {
             UseLocalPackages = true
-        });  
-        
-        Zip("./output", outputZip);   
+        });     
+    });
+
+Task("Package")
+    .IsDependentOn("Build")
+    .Does(() =>
+    {
+        Zip("./output", outputZip);
     });
     
 Task("Preview")
@@ -62,7 +67,7 @@ Task("Preview")
 //////////////////////////////////////////////////////////////////////
 
 Task("Default")
-    .IsDependentOn("Build");
+    .IsDependentOn("Package");
 
 //////////////////////////////////////////////////////////////////////
 // EXECUTION
