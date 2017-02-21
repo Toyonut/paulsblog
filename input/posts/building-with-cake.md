@@ -19,7 +19,7 @@ So that is what we did. Moved all the git repos, started reconstructing all the 
 
 In my new role, I found they were using [PSake](https://github.com/psake/psake/). <br>
 Psake is cool as it is all PowerShell, so if you know PowerShell, you can figure out PSake quickly.<br>
-This post isn't about PSake though, it is about Cake.<br> 
+This post isn't about PSake though, it is about [Cake](http://cakebuild.net/).<br> 
 My first Cake script was the one that builds and packages this blog.<br> 
 My second is one that runs a SonarQube scan and build.<br>
 Cake is batteries included as it can resolve dependancies through Nuget.<br>
@@ -121,7 +121,8 @@ I have two vars for the output zip and folder.<br>
 `Package` is just zipping up the Wyam output folder and is dependant on Build. <br>
 `Preview` allows me to run build.ps1 -target preview and update my preview blog as I type and save a post. <br>
 <br>
-`Task("Default").IsDependentOn("Package");` just tells cake to build the package step and it's dependancies if no target is specified.<br> 
+`Task("Default").IsDependentOn("Package");` just tells cake to build the package step and it's dependancies if no target is specified.<br>
+[Wyam reference for Cake](https://wyam.io/docs/deployment/cake)<br> 
 <br>
 That is all there is to it. Once Cake has done it's thing, I get a zip passed back to VSTS with my site in it ready for deployment. <br>
 <br> 
