@@ -2,6 +2,8 @@
 #nuget Wyam.Minification
 #theme CleanBlog
 
+Settings[Keys.Host] = "paulsblog.azurewebsites.net";
+
 Pipelines.Add("MinifyJS",
     ReadFiles("*.js"),
     MinifyJs(),
@@ -16,3 +18,8 @@ Pipelines.Add("MinifyCSS",
 
 System.Globalization.CultureInfo.DefaultThreadCurrentCulture
     = System.Globalization.CultureInfo.CreateSpecificCulture("en-NZ");
+
+GlobalMetadata["Title"] = "Blog";
+GlobalMetadata["Description"] = "Pauls Blog";
+GlobalMetadata["Intro"] = "It's my blog about the things I learn. I will update as life, work and family allows.";
+
