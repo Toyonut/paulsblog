@@ -1,8 +1,8 @@
 Title: Getting the Green Tick
 Published: 25/02/2017
 Tags:
-    -Azure
-    -SSL
+    - Azure
+    - SSL
 ---
 ### Getting the Green Tick
 
