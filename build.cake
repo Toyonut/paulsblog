@@ -30,7 +30,10 @@ Task ("Clean")
 
         if (DirectoryExists(buildDir)) {
             Information("Output directory found, deleting.");
-            DeleteDirectory(buildDir, recursive:true);
+            DeleteDirectory(buildDir, new DeleteDirectorySettings{
+                Recursive = true,
+                Force = true
+            });
         }
     });
 
