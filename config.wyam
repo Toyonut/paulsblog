@@ -1,6 +1,6 @@
 #recipe Blog
 #nuget Wyam.Minification
-#theme CleanBlog
+#theme SolidState
 
 Settings[Keys.Host] = "paulsblog.azurewebsites.net";
 
@@ -18,8 +18,4 @@ Pipelines.Add("MinifyCSS",
 
 System.Globalization.CultureInfo.DefaultThreadCurrentCulture
     = System.Globalization.CultureInfo.CreateSpecificCulture("en-NZ");
-
-GlobalMetadata["Title"] = "Blog";
-GlobalMetadata["Description"] = "Pauls Blog";
-GlobalMetadata["Intro"] = "My blog about the things I learn. I will update as life, work and family allows.";
 
